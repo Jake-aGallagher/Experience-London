@@ -40,7 +40,7 @@ router.post(
     }
 
     const expiration = new Date();
-    expiration.setSeconds(expiration.getSeconds() + 15 * 60);
+    expiration.setSeconds(expiration.getSeconds() + 60);// * 15 // 60 seconds for testing, should be set to something like 15 mins though
 
     const order = Order.build({
       userId: req.currentUser!.id,
